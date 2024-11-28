@@ -1,0 +1,9 @@
+# data
+data_processed/*
+data_raw/*
+!data_raw/others
+
+# dev
+.venv/*
+
+
