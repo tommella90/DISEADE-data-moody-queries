@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+dati_moody.egg-info/PKG-INFO
+dati_moody.egg-info/SOURCES.txt
+dati_moody.egg-info/dependency_links.txt
+dati_moody.egg-info/requires.txt
+dati_moody.egg-info/top_level.txt
+utils/__init__.py
+utils/zip.py
