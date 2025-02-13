@@ -6,5 +6,4 @@ zipped_files/*
 
 # dev
 .venv/*
-
-
+__pycache__/*

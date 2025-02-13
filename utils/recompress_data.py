@@ -1,42 +1,3 @@
-import gzip
-import shutil
-import os
-
-def compress_csv_files(folder_to_zip: str, zip_output: str) -> None:
-    # Ensure the output directory exists
-    os.makedirs(zip_output, exist_ok=True)
-
-    # Iterate through all files in the input directory
-    for file_name in os.listdir(folder_to_zip):
-        if file_name.endswith(".csv"):
-            input_csv = os.path.join(folder_to_zip, file_name)
-            output_csv_gz = os.path.join(zip_output, file_name + ".gz")  # Add .gz extension
-
-            # Compress each CSV file
-            with open(input_csv, 'rb') as f_in:
-                with gzip.open(output_csv_gz, 'wb') as f_out:
-                    shutil.copyfileobj(f_in, f_out)
-
-            print(f"Compressed {input_csv} to {output_csv_gz}")
-
-# Example usage
-# compress_csv_files("..\\data_processed\\balkans", "..\\zipped_files\\balkans")
-
- 
-
-class FileZipper:
-    def __init__(self, output_path):
-        self.base_path = Path("z:\\dati_moody\\zipped_files")  
-        self.output_path = Path(output_path)  
-
-    def zip_folder(self, file_name):
-
-        zip_destination = self.base_path / file_name  
-        shutil.make_archive(str(zip_destination), 'zip', root_dir=self.output_path)
-
-        print(f"Archive created at {zip_destination}.zip")
-
-
 import os
 import zipfile
 import gzip
@@ -94,10 +55,10 @@ def extract_and_recompress(zip_path, output_dir):
                     os.remove(extracted_path)
 
 
-# zip_path = "subs_eu.zip" 
-# output_dir = "subs_eu_compressi" 
+zip_path = "subs_eu.zip" 
+output_dir = "subs_eu_compressi" 
 
-# # processed_countries = {"AT", "BE", "BG", "CY"} 
-# extract_and_recompress(zip_path, output_dir)
-# print("Processing complete!")
+# processed_countries = {"AT", "BE", "BG", "CY"} 
+extract_and_recompress(zip_path, output_dir)
+print("Processing complete!")
 
