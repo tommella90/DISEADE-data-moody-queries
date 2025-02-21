@@ -206,5 +206,5 @@ eu = [
 ]
 
 balkans = [
-    "BA", "XK", "MK", "CS", "AL"
-]
+    "BA", "KV", "AL", "RS", "ME"
+] 
