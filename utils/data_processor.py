@@ -23,3 +23,5 @@ def compress_csv_files(folder_to_zip: str, zip_output: str) -> None:
                     shutil.copyfileobj(f_in, f_out)
 
             print(f"Compressed {input_csv} to {output_csv_gz}")
+
+
