@@ -1,3 +1,19 @@
+# SETUP
+
+Per setuppare: 
+- Installare UV (python package manager): https://docs.astral.sh/uv/getting-started/installation/.
+per esempio: 
+```
+pip install uv
+```
+- Sincronizzare l'env: 
+```
+uv sync
+```
+Questo installa tutti i packages
+
+
+
 # MOODY DATA QUERIES
 
 La repo contiene 3 cartelle: 
@@ -7,6 +23,7 @@ La repo contiene 3 cartelle:
 
 
 ## QUERIES
+
 Al momento, le query estraggono dati delle imprese multinazionali europee. Nello specifico:
 - **firmographics_processing**: crea dati 'intermedi' (da usare nelle altre query principali come intermediary tables), estraendo dai da *firmographics* per paese
 - **guo_europee**: GUOs europei con subsidiaries mondiali
