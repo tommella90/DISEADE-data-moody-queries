@@ -26,15 +26,6 @@ def convert_parquet_to_csv_gz(create_query, folder_name, input_path, country):
     print(f"✅ Converted to {output_csv_gz}")
     return output_csv_gz
 
-import os
-
-import os
-import gzip
-
-
-import os
-import gzip
-
 
 def split_gz_file(input_gz, max_size_mb=50):
 
