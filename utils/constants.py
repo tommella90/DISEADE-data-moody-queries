@@ -202,9 +202,11 @@ eu = [
     "DK", "EE", "FI", "FR", "DE", "GR", 
     "HU", "IE", "IT", "LV", "LT", "LU", 
     "MT", "NL", "PL", "PT", "RO", "SK", 
-    "SI", "ES", "SE"
+    "SI", "ES", "SE", "GB", "CH", "RU", 
 ]
 
 balkans = [
-    "BA", "KV", "AL", "RS", "ME"
+    "BA", "KV", "AL", "RS", "ME", "MK"
 ] 
+
+all_countries = asia + africa + oceania + americas + eu + balkans 

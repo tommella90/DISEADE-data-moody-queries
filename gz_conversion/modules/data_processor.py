@@ -27,9 +27,11 @@ def convert_parquet_to_csv_gz(create_query, folder_name, input_path, country):
     return output_csv_gz
 
 
-def split_gz_file(input_gz, max_size_mb=50):
-
-    output_dir = os.path.dirname(input_gz)
+def split_gz_file(input_gz, max_size_mb=50, output_dir=None):
+    
+    if output_dir is None:
+        output_dir = os.path.dirname(input_gz)
+    
     os.makedirs(output_dir, exist_ok=True)
     max_size_bytes = max_size_mb * 1024 * 1024
 
